@@ -1,0 +1,195 @@
+<<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sandal Kafe Menü</title>
+  <style>
+    body {
+      background-color: #1f1f1f;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #f0f0f0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .cat-btn {
+      background-color: #3b3b3b;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+     .hero-image {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+    .cat-btn:hover {
+      background-color: #5e5e5e;
+      transform: scale(1.05);
+    }
+
+    .menu-section {
+      display: none;
+      background-color: #2c2c2c;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      text-align: left;
+    }
+
+    .menu-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer {
+  background-color: #2c2c2c;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+
+    .menu-section li {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-item img {
+      width: 150px;
+      height: 150px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .price {
+      color: #ccc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚓ SANDAL KAFE MENÜ ⚓</h1>
+  
+
+  <div class="category-buttons">
+    <button class="cat-btn" onclick="toggleMenu('sicak')">Sıcak İçecekler</button>
+    <button class="cat-btn" onclick="toggleMenu('soguk')">Soğuk İçecekler</button>
+    <button class="cat-btn" onclick="toggleMenu('yemek')">Yemekler</button>
+    <button class="cat-btn" onclick="toggleMenu('tatli')">Tatlılar</button>
+  </div> 
+
+  <div id="sicak" class="menu-section">
+    <ul>
+      <li><div class="menu-item"><img src="images/türk kahvesi.jpg"alt="kahve"> TÜRK KAHVESİ</div><span class="price">30 TL</span></li>
+      <li><div class="menu-item"><img src="images/çay.jpg" alt="çay"> ÇAY</div><span class="price">20 TL</span></li>
+      <li><div class="menu-item"><img src="images/nescafe.jpg" alt="nescafe"> NESCAFE</div><span class="price">35 TL</span></li>
+      <li><div class="menu-item"><img src="images/sahlep.jpg" alt="salep"> SAHLEP</div><span class="price">40 TL</span></li>
+    </ul>
+  </div>
+
+  <div id="soguk" class="menu-section">
+    <ul>
+      <li><div class="menu-item"><img src="images/kola 2.webp"> COCA-COLA</div><span class="price">60 TL</span></li>
+      <li><div class="menu-item"><img src="images/fanta 2.webp" alt="fanta"> FANTA</div><span class="price">60 TL</span></li>
+      <li><div class="menu-item"><img src="images/fresa.webp" alt="freşa"> FREŞA</div><span class="price">50 TL</span></li>
+      <li><div class="menu-item"><img src="images/ayran,.jpg" alt="ayran"> AYRAN</div><span class="price">40 TL</span></li>
+      <li><div class="menu-item"><img src= "images/şalgam 2.jpg"şalgam"> ŞALGAM</div><span class="price">50 TL</span></li>
+      <li><div class="menu-item"><img src="images/su.jpg" alt="su"> SU</div><span class="price">20 TL</span></li>
+      <li><div class="menu-item"><img src= "images/lipton2.webp"ice tea"> ICE TEA</div><span class="price">60 TL</span></li>
+    </ul>
+  </div>
+
+  <div id="yemek" class="menu-section">
+    <ul>
+      <li><div class="menu-item"><img src="images/köfte ekmek.jpg" alt="köfte"> KÖFTE EKMEK</div><span class="price">200 TL</span></li>
+      <li><div class="menu-item"><img src="images/balık ekmek.jpg" alt="balık"> BALIK EKMEK</div><span class="price">170 TL</span></li>
+      <li><div class="menu-item"><img src= "images/sucuk ekmek.webp"sucuk"> SUCUK EKMEK</div><span class="price">170 TL</span></li>
+      <li><div class="menu-item"><img src="images/hamburger.jpg"hamburger"> HAMBURGER</div><span class="price">170 TL</span></li>
+      <li><div class="menu-item"><img src="images/karışık tost.jpg" alt="tost"> KARIŞIK TOST</div><span class="price">160 TL</span></li>
+      <li><div class="menu-item"><img src= "images/kaşarlı tost.jpg"kaşarlı"> KAŞARLI TOST</div><span class="price">150 TL</span></li>
+      <li><div class="menu-item"><img src="images/köfte tabağı.jpg" alt="tabak"> TABAK KÖFTE</div><span class="price">270 TL</span></li>
+    </ul>
+  </div>
+
+  <div id="tatli" class="menu-section">
+    <ul>
+      <li><div class="menu-item"><img src="images/magnoşia.webp"magnolia"> MAGNOLIA</div><span class="price">120 TL</span></li>
+      <li><div class="menu-item"><img src="images/supangla.webp" alt="supangle"> SUPANGLE</div><span class="price">95 TL</span></li>
+      <li><div class="menu-item"><img src="images/yaş pasta.jpg" alt="pasta"> DİLİM YAŞ PASTA</div><span class="price">120 TL</span></li>
+      <li><div class="menu-item"><img src= "images/kurabiye.webp"kurabiye"> KURABİYE TABAĞI</div><span class="price">80 TL</span></li>
+      <li><div class="menu-item"><img src= "images/sütlaç.webp"sütlaç"> FIRIN SÜTLAÇ</div><span class="price">120 TL</span></li>
+      <li><div class="menu-item"><img src= "images/revani.webp"revani"> REVANİ</div><span class="price">90 TL</span></li>
+      <li><div class="menu-item"><img src= "images/dilim kek.webp"kek"> DİLİM KEK</div><span class="price">60 TL</span></li>
+    </ul>
+  </div>
+   <img src="images/sandal kafeee.jpg" alt="Sandal Kafe" class="hero-image">
+
+  <script>
+    function toggleMenu(id) {
+      const section = document.getElementById(id);
+      const allSections = document.querySelectorAll('.menu-section');
+      allSections.forEach(sec => {
+        if (sec !== section) sec.style.display = 'none';
+      });
+      section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+  <footer class="footer">
+  <p>© 2025 Sandal Kafe | Tüm Hakları Saklıdır</p>
+  <p>instagram: <a href="@sandallkafe">iletisim@sandalkafe.com</a></p>
+</footer>
+
+
+</body>
+</html>
